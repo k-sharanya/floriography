@@ -1,0 +1,467 @@
+.skip-link{
+     /* needs to be positioned first */
+     position: absolute; 
+     top: -100px;
+     /* height of 25 */
+     height: 25px;
+     z-index: 1000;   
+}
+
+.skip-link:focus {
+  top: 0;  
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f5f0e8;
+  color: #1a140e;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* keyboard focus ring */
+:focus-visible {
+  outline: 3px solid #2e5339;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+/* HEADER */
+.site-header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+
+.header-inner {
+  margin: 0 auto;
+}
+
+.header-ornament {
+  display: block;
+  color: #8a5e1a;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4em;
+  font-size: 0.9rem;
+}
+
+.header-top {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #5a4535;
+  margin-bottom: 0.4rem;
+}
+
+.header-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.header-title em {
+  font-style: italic;
+  color: #2e5339;
+}
+
+.header-desc {
+  font-size: 1.5rem;
+  color: #5a4535;
+  font-style: italic;
+}
+
+.header-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.header-rule span {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c49a3c, transparent);
+}
+
+.rule-sym {
+  color: #8a5e1a;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+  background: none;
+}
+
+
+/* MAIN */
+#main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+
+/* FLOWER GRID */
+.flower-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+
+/* FLOWER CARD */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: #1a140e;
+  background: #ffffff;
+  border: 1px solid rgba(160, 114, 42, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(26, 20, 14, 0.10);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(26, 20, 14, 0.18);
+}
+
+/* image area */
+.card-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+/* the actual flower image*/
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* quote that appears on hover */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(26, 20, 14, 0.7) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card-link:hover .card-overlay,
+.card-link:focus-visible .card-overlay {
+  opacity: 100;
+}
+
+.card-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* card text area */
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(160, 114, 42, 0.12);
+}
+
+.card-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0.1rem;
+}
+
+.card-genus {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #5a4535;
+  margin-bottom: 0.5rem;
+}
+
+.card-meaning {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  color: #2e5339;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000000;
+  transition: color 0.35s ease, gap 0.35s ease;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #1a140e;
+  color: #f5f0e8;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+}
+
+.footer-sub {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+
+/* INDIVIDUAL FLOWER PAGESSS */
+.detail-page {
+  min-height: 100vh;
+}
+
+.detail-hero {
+  padding: 3rem 2rem 0;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-bottom: 3rem;
+}
+
+.back-link:hover {
+  color: #2e5339;
+  border-color: #2e5339;
+}
+
+.detail-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.detail-genus {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #5a4535;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.detail-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.detail-title em {
+  font-style: italic;
+}
+
+/* different color for each flower <3 */
+.rose-page      .detail-title em { color: #8b1a1a; }
+.hyacinth-page  .detail-title em { color: #3a2870; }
+.sunflower-page .detail-title em { color: #8a6000; }
+.tulip-page     .detail-title em { color: #7a1050; }
+.peony-page     .detail-title em { color: #6a1035; }
+
+/* trying a flex display */
+.detail-meanings {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.meaning-pill {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  background: #2e5339;
+}
+
+/* same matching matching to the title colors */
+.rose-page      .meaning-pill { background: #8b1a1a; }
+.hyacinth-page  .meaning-pill { background: #3a2870; }
+.sunflower-page .meaning-pill { background: #8a6000; }
+.tulip-page     .meaning-pill { background: #7a1050; }
+.peony-page     .meaning-pill { background: #6a1035; }
+
+.detail-flower {
+  font-size: 7rem;
+  line-height: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: auto;
+}
+
+.detail-quote {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.detail-quote blockquote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #3d2f20;
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+.detail-quote cite {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a4535;
+  font-style: normal;
+}
+
+.detail-section {
+  margin-bottom: 2.5rem;
+}
+
+.detail-section h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(160, 114, 42, 0.2);
+}
+
+.detail-section p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #3d2f20;
+  line-height: 1.85;
+}
+
+.detail-section p + p {
+  margin-top: 0.9rem;
+}
+
+.detail-facts {
+  background: #ede5d5;
+  border-radius: 2px;
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.detail-facts h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: bold;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+}
+
+.facts-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.facts-list li {
+  display: grid;
+  font-size: 1rem;
+}
+
+.fact-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a4535;
+  min-width: 90px;
+  padding-top: 0.1em;
+}
+
+.fact-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #3d2f20;
+  line-height: 1.5;
+}
+
+
+/* RESPONSIVE & MOTION */
+@media (max-width: 640px) {
+  #main-content { padding: 2.5rem 1.25rem 4rem; }
+  .flower-grid { grid-template-columns: 1fr; }
+  .card-image { height: 220px; }
+  .site-header { padding: 2.5rem 1.5rem 1.5rem; }
+  .detail-content { padding: 2.5rem 1.25rem 4rem; }
+  .detail-hero { padding: 2rem 1.25rem 0; }
+}
+
+@media (min-width: 900px) {
+  .flower-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
