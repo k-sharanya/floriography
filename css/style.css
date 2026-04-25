@@ -253,6 +253,23 @@ body {
   text-align: center;
 }
 
+.detail-hero-image {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.detail-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -302,12 +319,12 @@ body {
   font-style: italic;
 }
 
-/* different color for each flower <3 */
-.rose-page      .detail-title em { color: #8b1a1a; }
-.hyacinth-page  .detail-title em { color: #3a2870; }
-.sunflower-page .detail-title em { color: #8a6000; }
-.tulip-page     .detail-title em { color: #7a1050; }
-.peony-page     .detail-title em { color: #6a1035; }
+/* different color title to match each flower <3 */
+.rose-page.detail-title em {color: #8b1a1a;}
+.hyacinth-page.detail-title em {color: #3a2870;}
+.sunflower-page.detail-title em {color: #8a6000;}
+.tulip-page.detail-title em {color: #7a1050;}
+.peony-page.detail-title em {color: #6a1035;}
 
 /* trying a flex display */
 .detail-meanings {
@@ -318,6 +335,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
+/* quick adjectives that are pill shaped lol */
 .meaning-pill {
   font-family: 'Jost', sans-serif;
   font-size: 0.75rem;
@@ -331,11 +349,11 @@ body {
 }
 
 /* same matching matching to the title colors */
-.rose-page      .meaning-pill { background: #8b1a1a; }
-.hyacinth-page  .meaning-pill { background: #3a2870; }
-.sunflower-page .meaning-pill { background: #8a6000; }
-.tulip-page     .meaning-pill { background: #7a1050; }
-.peony-page     .meaning-pill { background: #6a1035; }
+.rose-page.meaning-pill {background: #8b1a1a;}
+.hyacinth-page.meaning-pill {background: #3a2870;}
+.sunflower-page.meaning-pill {background: #8a6000;}
+.tulip-page.meaning-pill {background: #7a1050;}
+.peony-page.meaning-pill {background: #6a1035;}
 
 .detail-flower {
   font-size: 7rem;
@@ -447,16 +465,33 @@ body {
 
 /* RESPONSIVE & MOTION */
 @media (max-width: 640px) {
-  #main-content { padding: 2.5rem 1.25rem 4rem; }
-  .flower-grid { grid-template-columns: 1fr; }
-  .card-image { height: 220px; }
-  .site-header { padding: 2.5rem 1.5rem 1.5rem; }
-  .detail-content { padding: 2.5rem 1.25rem 4rem; }
-  .detail-hero { padding: 2rem 1.25rem 0; }
+  #main-content { 
+    padding: 2.5rem 1.25rem 4rem; 
+  }
+  .flower-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .card-image { 
+    height: 220px; 
+  }
+  .site-header { 
+    padding: 2.5rem 1.5rem 1.5rem; 
+  }
+  .detail-content { 
+    padding: 2.5rem 1.25rem 4rem; 
+  }
+  .detail-hero { 
+    padding: 2rem 1.25rem 0; 
+  }
+  .detail-hero-image {
+    height: 250px;
+  }
 }
 
 @media (min-width: 900px) {
-  .flower-grid { grid-template-columns: repeat(3, 1fr); }
+  .flower-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
