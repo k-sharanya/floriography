@@ -78,30 +78,6 @@ body {
   font-style: italic;
 }
 
-.header-rule {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-
-.header-rule span {
-  display: block;
-  width: 100px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #c49a3c, transparent);
-}
-
-.rule-sym {
-  color: #8a5e1a;
-  font-size: 1.2rem;
-  width: auto;
-  height: auto;
-  background: none;
-}
-
-
 /* MAIN */
 #main-content {
   max-width: 1200px;
@@ -129,11 +105,9 @@ body {
   border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(26, 20, 14, 0.10);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.card-link:hover,
-.card-link:focus-visible {
+.card-link:hover{
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(26, 20, 14, 0.18);
 }
@@ -160,14 +134,13 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 1.25rem;
-  background: linear-gradient(to top, rgba(26, 20, 14, 0.7) 0%, transparent 70%);
+  background: linear-gradient(to top, rgba(16, 12, 9, 0.7) 0%, transparent 130%);
   opacity: 0;
-  transition: opacity 0.35s ease;
 }
 
 .card-link:hover .card-overlay,
 .card-link:focus-visible .card-overlay {
-  opacity: 100;
+  opacity: 1;
 }
 
 .card-quote {
@@ -326,7 +299,7 @@ body {
 .tulip-page.detail-title em {color: #7a1050;}
 .peony-page.detail-title em {color: #6a1035;}
 
-/* trying a flex display */
+/* flex display */
 .detail-meanings {
   display: flex;
   justify-content: center;
