@@ -107,7 +107,8 @@ body {
   box-shadow: 0 4px 24px rgba(26, 20, 14, 0.10);
 }
 
-.card-link:hover{
+.card-link:hover, 
+.card-link:focus-visible{
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(26, 20, 14, 0.18);
 }
@@ -243,7 +244,8 @@ body {
 }
 
 
-.back-link {
+.back-link, 
+.back-link:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
